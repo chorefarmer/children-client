@@ -51,14 +51,20 @@
     data () {
       return {
         // 查看 PDF 的 API
-        reportUrl: 'http://localhost:8082/pdf/preview/'
+        reportUrl: 'http://localhost:8082/pdf/preview?'
       }
     },
 
     mounted () {
-      // 获取用户 ID
+      // 获取用户 ID - 检测次数
       const usersIdParam = this.$store.getters.getId;
-      this.reportUrl += usersIdParam;
+      const checkTimes = this.$store.getters.getMeasuresTimes;
+
+      const param_0 = 'guardian_phone=' + usersIdParam;
+      const param_1 = 'inspectOrder=' + checkTimes;
+      this.reportUrl += param_0;
+      this.reportUrl += '&';
+      this.reportUrl += param_1.toString();
     },
 
     methods: {
