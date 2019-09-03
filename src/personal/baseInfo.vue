@@ -400,6 +400,7 @@ export default {
       this.isCreateNewUser = false;
       this.isModifyUser = false;
       this.showReset = false;
+      this.isEdited = true;
       this.getTableData();
     }
 

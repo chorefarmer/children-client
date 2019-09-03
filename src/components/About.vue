@@ -576,7 +576,7 @@ export default {
       // 获取目标用户姓名
       this.$store.commit('changeUserName', _checkUserName);
       this.$store.commit('newMeasures', _checkMeaTime);
-      this.$router.push('/Home');
+      this.$router.push('/baseInfo');
     },
 
     /**

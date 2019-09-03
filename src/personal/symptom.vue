@@ -532,7 +532,7 @@
       getFormData (symptomId, symptomTimes) {
         // 获取全局状态 ID
         // const _symptomCheckId = this.$store.getters.getId;
-        this.axios.get('http://localhost:8082/pastMedicalHistory', {
+        this.axios.get('http://localhost:8082/pastMedicalHistory/search', {
           params: {
             guardian_phone: symptomId,
             inspectOrder: symptomTimes
