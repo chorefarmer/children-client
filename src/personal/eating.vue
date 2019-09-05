@@ -15,11 +15,12 @@
             <el-option label="150-200克" value="4"></el-option>
             <el-option label="200-250克" value="5"></el-option>
             <el-option label="250-300克" value="6"></el-option>
-            <el-option label="350-400克" value="7"></el-option>
-            <el-option label="400-450克" value="8"></el-option>
-            <el-option label="450-500克" value="9"></el-option>
-            <el-option label="500-550克" value="10"></el-option>
-            <el-option label="大于550克" value="11"></el-option>
+            <el-option label="300-350克" value="7"></el-option>
+            <el-option label="350-400克" value="8"></el-option>
+            <el-option label="400-450克" value="9"></el-option>
+            <el-option label="450-500克" value="10"></el-option>
+            <el-option label="500-550克" value="11"></el-option>
+            <el-option label="大于550克" value="12"></el-option>
             <el-option label="" value=""></el-option>
           </el-select>
         </el-form-item>
