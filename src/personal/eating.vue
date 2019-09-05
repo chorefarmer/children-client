@@ -2,50 +2,68 @@
   <el-form ref="form" :model="eatingForm" label-width="100px">
     <div class="region">
       <div class="region-0">
+
+        <!-- 字段的修改 -->
+        <!-- name, value -->
+
         <el-form-item label="">
           <el-aside style="font-size: 18px;font-weight: bold">每天食用主食量：</el-aside>
-          <el-select v-model="eatingForm.staple" placeholder="">
-            <el-option label="不食用" value="1"></el-option>
-            <el-option label="小于75克" value="2"></el-option>
-            <el-option label="75-150克" value="3"></el-option>
-            <el-option label="150-225克" value="4"></el-option>
-            <el-option label="225-300克" value="5"></el-option>
-            <el-option label="大于300克" value="6"></el-option>
-            <el-option label="" value=""></el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item label="">
-          <el-aside style="font-size: 18px;font-weight: bold">每天食用蔬菜量：</el-aside>
-          <el-select v-model="eatingForm.vegetable" placeholder="">
+          <el-select v-model="eatingForm.staple" placeholder="" value="">
             <el-option label="不食用" value="1"></el-option>
             <el-option label="小于100克" value="2"></el-option>
-            <el-option label="100-200克" value="3"></el-option>
-            <el-option label="200-300克" value="4"></el-option>
-            <el-option label="300-400克" value="5"></el-option>
-            <el-option label="大于400克" value="6"></el-option>
+            <el-option label="100-150克" value="3"></el-option>
+            <el-option label="150-200克" value="4"></el-option>
+            <el-option label="200-250克" value="5"></el-option>
+            <el-option label="250-300克" value="6"></el-option>
+            <el-option label="350-400克" value="7"></el-option>
+            <el-option label="400-450克" value="8"></el-option>
+            <el-option label="450-500克" value="9"></el-option>
+            <el-option label="500-550克" value="10"></el-option>
+            <el-option label="大于550克" value="11"></el-option>
             <el-option label="" value=""></el-option>
           </el-select>
         </el-form-item>
+
+        <el-form-item label="">
+          <el-aside style="font-size: 18px;font-weight: bold">每天食用蔬菜量：</el-aside>
+          <el-select v-model="eatingForm.vegetable" placeholder="" value="">
+            <el-option label="不食用" value="1"></el-option>
+            <el-option label="小于200克" value="2"></el-option>
+            <el-option label="200-300克" value="3"></el-option>
+            <el-option label="300-400克" value="4"></el-option>
+            <el-option label="400-500克" value="5"></el-option>
+            <el-option label="大于500克" value="6"></el-option>
+            <el-option label="大于1000克" value="7"></el-option>
+            <el-option label="" value=""></el-option>
+          </el-select>
+        </el-form-item>
+
         <el-form-item label="">
           <el-aside style="font-size: 18px;font-weight: bold">每周食用海产品量：</el-aside>
-          <el-select v-model="eatingForm.marine" placeholder="">
+          <el-select v-model="eatingForm.marine" placeholder="" value="">
             <el-option label="不食用" value="1"></el-option>
             <el-option label="小于150克" value="2"></el-option>
             <el-option label="150-250克" value="3"></el-option>
             <el-option label="250-350克" value="4"></el-option>
-            <el-option label="350-500克" value="5"></el-option>
-            <el-option label="大于500克" value="6"></el-option>
+            <el-option label="350-450克" value="5"></el-option>
+            <el-option label="450-550克" value="6"></el-option>
+            <el-option label="550-650克" value="7"></el-option>
+            <el-option label="650-750克" value="8"></el-option>
+            <el-option label="750-850克" value="9"></el-option>
+            <el-option label="850-950克" value="10"></el-option>
+            <el-option label="大于1000克" value="11"></el-option>
             <el-option label="" value=""></el-option>
           </el-select>
         </el-form-item>
+
         <el-form-item label="">
           <el-aside style="font-size: 18px;font-weight: bold">每周食用鸡蛋量：</el-aside>
-          <el-select v-model="eatingForm.egg" placeholder="">
+          <el-select v-model="eatingForm.egg" placeholder="" value="">
             <el-option label="不食用" value="1"></el-option>
             <el-option label="小于3个" value="2"></el-option>
             <el-option label="3-5个" value="3"></el-option>
-            <el-option label="6-8个" value="4"></el-option>
-            <el-option label="大于8个" value="5"></el-option>
+            <el-option label="5-7个" value="4"></el-option>
+            <el-option label="大于7个" value="5"></el-option>
             <el-option label="" value=""></el-option>
           </el-select>
         </el-form-item>
@@ -54,47 +72,60 @@
     <div class="region-1">
       <el-form-item label="">
         <el-aside style="font-size: 18px;font-weight: bold">每天食用水果量：</el-aside>
-        <el-select v-model="eatingForm.fruit" placeholder="">
+        <el-select v-model="eatingForm.fruit" placeholder="" value="">
           <el-option label="不食用" value="1"></el-option>
           <el-option label="小于100克" value="2"></el-option>
           <el-option label="100-200克" value="3"></el-option>
           <el-option label="200-300克" value="4"></el-option>
           <el-option label="300-400克" value="5"></el-option>
-          <el-option label="大于400克" value="6"></el-option>
+          <el-option label="400-500克" value="6"></el-option>
+          <el-option label="大于500克" value="7"></el-option>
           <el-option label="" value=""></el-option>
         </el-select>
       </el-form-item>
+      
       <el-form-item label="">
         <el-aside style="font-size: 18px;font-weight: bold">每周食用禽畜肉量：</el-aside>
-        <el-select v-model="eatingForm.meat" placeholder="">
+        <el-select v-model="eatingForm.meat" placeholder="" value="">
           <el-option label="不食用" value="1"></el-option>
           <el-option label="小于150克" value="2"></el-option>
           <el-option label="150-250克" value="3"></el-option>
           <el-option label="250-350克" value="4"></el-option>
-          <el-option label="350-500克" value="5"></el-option>
-          <el-option label="大于500克" value="6"></el-option>
+          <el-option label="350-450克" value="5"></el-option>
+          <el-option label="450-550克" value="6"></el-option>
+          <el-option label="550-650克" value="7"></el-option>
+          <el-option label="650-750克" value="8"></el-option>
+          <el-option label="750-850克" value="9"></el-option>
+          <el-option label="850-950克" value="10"></el-option>
+          <el-option label="大于1000克" value="11"></el-option>
           <el-option label="" value=""></el-option>
         </el-select>
       </el-form-item>
+      
       <el-form-item label="">
         <el-aside style="font-size: 18px;font-weight: bold">每周饮用牛奶量：</el-aside>
-        <el-select v-model="eatingForm.milk" placeholder="">
+        <el-select v-model="eatingForm.milk" placeholder="" value="">
           <el-option label="不食用" value="1"></el-option>
-          <el-option label="小于1000毫升" value="2"></el-option>
-          <el-option label="1000-1500毫升" value="3"></el-option>
-          <el-option label="1500-2000毫升" value="4"></el-option>
-          <el-option label="大于2000毫升" value="5"></el-option>
+          <el-option label="小于1500毫升" value="2"></el-option>
+          <el-option label="1500-2000毫升" value="3"></el-option>
+          <el-option label="2000-2500毫升" value="4"></el-option>
+          <el-option label="2500-3000毫升" value="5"></el-option>
+          <el-option label="3000-3500毫升" value="6"></el-option>
+          <el-option label="大于3500毫升" value="7"></el-option>
           <el-option label="" value=""></el-option>
         </el-select>
       </el-form-item>
+      
       <el-form-item label="">
         <el-aside style="font-size: 18px;font-weight: bold">每周食用坚果量：</el-aside>
-        <el-select v-model="eatingForm.nut" placeholder="">
+        <el-select v-model="eatingForm.nut" placeholder="" value="">
           <el-option label="不食用" value="1"></el-option>
-          <el-option label="小于30克" value="2"></el-option>
-          <el-option label="30-50克" value="3"></el-option>
-          <el-option label="50-70克" value="4"></el-option>
-          <el-option label="大于70克" value="5"></el-option>
+          <el-option label="50-70克" value="2"></el-option>
+          <el-option label="70-90克" value="3"></el-option>
+          <el-option label="90-110克" value="4"></el-option>
+          <el-option label="110-130克" value="5"></el-option>
+          <el-option label="130-150克" value="6"></el-option>
+          <el-option label="大于150克" value="7"></el-option>
           <el-option label="" value=""></el-option>
         </el-select>
       </el-form-item>

@@ -47,11 +47,11 @@
         </el-table-column>
 
         <!-- 总体水- 待定 -->
-<!--        <el-table-column
+        <el-table-column
           prop="tbw"
           label="总体水"
           width="120">
-        </el-table-column>-->
+        </el-table-column>
 
         <el-table-column
           prop="icf"
@@ -222,7 +222,7 @@
        * @function: XML to JSON test
        * @author: White
        * @date: 19 - 06 - 17
-       * @description: just for test
+       * @description: just for test, not use at all
        * */
       XMLtoJsonTest () {
         this.axios.get('http://localhost:8082/xml2Json')
@@ -408,7 +408,7 @@
 
                         // 总体水 - 待定
                       } else if (value.Name === 'tbw') {
-                        // currentObjectContainer.tbw = value.content; // 总体水
+                        currentObjectContainer.tbw = value.content; // 总体水
                       } else if (value.Name === 'icf') {
                         currentObjectContainer.icf = value.content; // 细胞内液
                       } else if (value.Name === 'ecf') {
@@ -658,7 +658,7 @@
           // formDataOfComposition.append('score', tableListDataOfComposition.score) // 分数
 
           // 总体水 - 待定
-          // formDataOfComposition.append('CheckDate', tableListDataOfComposition.date)
+          formDataOfComposition.append('TotalWater', tableListDataOfComposition.tbw)
 
           this.axios.post('http://localhost:8082/bodyCompositionTest', formDataOfComposition, {
             // 定义表头
@@ -731,6 +731,10 @@
                   objectContainerForUsersComposition.hei = currentUserTableDataForComposition.height; // 身高
                   objectContainerForUsersComposition.wei = currentUserTableDataForComposition.weight; // 体重
                   objectContainerForUsersComposition.pbf = currentUserTableDataForComposition.bodyFatPercent; // 体脂百分比
+
+                  // 总体水
+                  objectContainerForUsersComposition.tbw = currentUserTableDataForComposition.totalWater;
+
                   // 细胞内/外液
                   objectContainerForUsersComposition.icf = currentUserTableDataForComposition.intracellularFluid;
                   objectContainerForUsersComposition.ecf = currentUserTableDataForComposition.extracellularFluid;
